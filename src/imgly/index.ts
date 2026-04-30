@@ -317,5 +317,4 @@ export async function initVideoAnimationsEditor(cesdk: CreativeEditorSDK) {
     JSON.stringify(AUDIO_ASSETS),
     resolveAssetPath('/assets/audio')
   );
-
 }
