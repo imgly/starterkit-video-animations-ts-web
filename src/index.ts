@@ -17,13 +17,10 @@ import { resolveAssetPath } from './imgly/resolveAssetPath';
 // ============================================================================
 
 const config = {
-  userId: 'starterkit-video-animations-user'
+  userId: 'starterkit-video-animations-user',
 
-  // Local assets (uncomment and set path for self-hosted assets)
-  // baseURL: `/assets/`,
+  // Local assets for development
 
-  // License key (required for production)
-  // license: 'YOUR_LICENSE_KEY',
 };
 
 // ============================================================================
@@ -33,7 +30,7 @@ const config = {
 CreativeEditorSDK.create('#cesdk_container', config)
   .then(async (cesdk) => {
     // Debug access (remove in production)
-    (window as any).cesdk = cesdk;
+    (window as unknown as { cesdk: CreativeEditorSDK }).cesdk = cesdk;
 
     await initVideoAnimationsEditor(cesdk);
 
