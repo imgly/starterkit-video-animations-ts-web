@@ -15,6 +15,7 @@ import {
   openAnimationPanel
 } from './imgly';
 
+
 // ============================================================================
 // Configuration
 // ============================================================================
@@ -43,7 +44,7 @@ CreativeEditorSDK.create('#cesdk_container', config)
 
     // Load initial scene from CDN
     await cesdk.load(
-      `${DEMO_ASSETS_BASE_URL}/assets/templates/lunar-video-default.imgly`
+      `${DEMO_ASSETS_BASE_URL}/assets/templates/lunar-video-default/scene.scene`
     );
 
     // ============================================================================
