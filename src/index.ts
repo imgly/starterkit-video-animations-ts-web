@@ -4,13 +4,17 @@
  * A video editor focused on animations with custom scene templates,
  * audio assets, and auto-opening animation panel.
  *
- * @see https://img.ly/docs/cesdk/js/getting-started/
+ * @see https://img.ly/docs/cesdk/js/get-started/overview-e18f40/
  */
 
 import CreativeEditorSDK from '@cesdk/cesdk-js';
 
-import { initVideoAnimationsEditor, openAnimationPanel } from './imgly';
-import { resolveAssetPath } from './imgly/resolveAssetPath';
+import {
+  DEMO_ASSETS_BASE_URL,
+  initVideoAnimationsEditor,
+  openAnimationPanel
+} from './imgly';
+
 
 // ============================================================================
 // Configuration
@@ -39,8 +43,8 @@ CreativeEditorSDK.create('#cesdk_container', config)
     // ============================================================================
 
     // Load initial scene from CDN
-    await cesdk.loadFromURL(
-      resolveAssetPath('/assets/templates/lunar-cosmetics.scene')
+    await cesdk.load(
+      `${DEMO_ASSETS_BASE_URL}/assets/templates/lunar-video-default/scene.scene`
     );
 
     // ============================================================================
