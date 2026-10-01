@@ -33,8 +33,6 @@ const config = {
 
 CreativeEditorSDK.create('#cesdk_container', config)
   .then(async (cesdk) => {
-    // Debug access (remove in production)
-    (window as unknown as { cesdk: CreativeEditorSDK }).cesdk = cesdk;
 
     await initVideoAnimationsEditor(cesdk);
 
