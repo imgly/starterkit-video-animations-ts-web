@@ -26,15 +26,6 @@ import type CreativeEditorSDK from '@cesdk/cesdk-js';
  */
 export function setupPanels(cesdk: CreativeEditorSDK): void {
   // ============================================================================
-  // VIEW CONFIGURATION
-  // Set the default view mode
-  // ============================================================================
-
-  // #region View Configuration
-  cesdk.ui.setView('default');
-  // #endregion
-
-  // ============================================================================
   // INSPECTOR PANEL
   // Configure the block properties panel
   // ============================================================================
